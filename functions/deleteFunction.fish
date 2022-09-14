@@ -5,6 +5,7 @@ function deleteFunction -a func_name
         echo "Permanently delete function '$func_name'? 🤔"
         if _promptUserConfirmation
             functions -e $func_name
+            funcsave $func_name
             echo "👍 Successfully deleted function '$func_name'"
         else
             echo "⛔ Cancelling deletion"
